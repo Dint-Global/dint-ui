@@ -96,12 +96,14 @@
     /* Forms */
     .form { display: flex; flex-direction: column; gap: 14px; }
     .field { display: flex; flex-direction: column; gap: 6px; font-size: var(--dint-text-sm); font-weight: 600; }
+    .field > span:first-child { display: block; }  /* label text, with an optional inline .hint */
     .field .hint, .hint { font-weight: 400; color: var(--dint-muted); font-size: var(--dint-text-sm); margin: 0; }
+    .field .hint { margin-left: 4px; font-size: var(--dint-text-xs); }
     .check { display: flex; align-items: flex-start; gap: 8px; font-size: var(--dint-text-sm); font-weight: 450; }
     .check input { margin-top: 3px; }
     .input, .dint input:not([type=checkbox]):not([type=radio]):not([type=hidden]), .dint select {
         font: inherit; font-size: var(--dint-text-base); font-weight: 400; color: var(--dint-text); background: var(--dint-surface);
-        padding: 8px 12px; min-height: 38px; box-sizing: border-box; width: 100%;
+        padding: 0 12px; height: 38px; line-height: 36px; box-sizing: border-box; width: 100%;
         border: 1px solid var(--dint-border-strong); border-radius: var(--dint-radius);
     }
     .dint input:focus, .dint select:focus { outline: none; border-color: var(--dint-accent); box-shadow: var(--dint-focus); }
@@ -120,7 +122,7 @@
     .table th, .table td { text-align: left; padding: 9px 12px; border-top: 1px solid var(--dint-border); vertical-align: middle; }
     .table th { border-top: 0; color: var(--dint-muted); font-weight: 600; white-space: nowrap; font-size: var(--dint-text-xs); }
     .table tbody tr:hover { background: var(--dint-surface-2); }
-    .table .nowrap, .table td.when { white-space: nowrap; }
+    .table .nowrap, .table td.when, .table .nowrap code { white-space: nowrap; }
     .table .center { text-align: center; }
     .table-foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 12px 0; color: var(--dint-muted); font-size: var(--dint-text-sm); }
 
