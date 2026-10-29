@@ -1,0 +1,13 @@
+{
+  "name": "dint-ui",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DINT's shared UI foundation: design tokens (Tailwind v4 theme), component classes and the Pretendard font, for all internal apps",
+  "exports": {
+    "./theme.css": "./theme.css",
+    "./components.css": "./components.css",
+    "./fonts.css": "./fonts.css",
+    "./tokens.css": "./tokens.css"
+  },
+  "files": ["tokens.css", "theme.css", "components.css", "fonts.css", "fonts/"]
+}

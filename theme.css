@@ -1,0 +1,36 @@
+/*
+ * Tailwind v4 theme for DINT apps: maps the --dint-* tokens (tokens.css) to Tailwind names, so utilities like
+ * bg-surface, text-muted, border-line, rounded-card, shadow-card and font-sans follow the shared design and dark mode.
+ *   @import "tailwindcss";
+ *   @import "dint-ui/tokens.css";
+ *   @import "dint-ui/theme.css";
+ *   @import "dint-ui/components.css";
+ */
+@theme inline {
+    --color-bg: var(--dint-bg);
+    --color-surface: var(--dint-surface);
+    --color-surface-2: var(--dint-surface-2);
+    --color-line: var(--dint-border);
+    --color-line-strong: var(--dint-border-strong);
+    --color-fg: var(--dint-text);
+    --color-muted: var(--dint-muted);
+    --color-brand: var(--dint-brand);
+    --color-on-brand: var(--dint-on-brand);
+    --color-accent: var(--dint-accent);
+    --color-accent-soft: var(--dint-accent-soft);
+    --color-ok: var(--dint-ok);
+    --color-ok-soft: var(--dint-ok-soft);
+    --color-warn: var(--dint-warn);
+    --color-warn-soft: var(--dint-warn-soft);
+    --color-danger: var(--dint-danger);
+    --color-danger-soft: var(--dint-danger-soft);
+
+    --font-sans: var(--dint-font);
+    --font-mono: var(--dint-font-mono);
+
+    --radius-sm: var(--dint-radius-sm);
+    --radius-md: var(--dint-radius);
+    --radius-card: var(--dint-radius-lg);
+    --shadow-card: var(--dint-shadow);
+    --shadow-raised: var(--dint-shadow-lg);
+}

@@ -1,0 +1,87 @@
+/*
+ * DINT UI tokens: the one place that defines colours, type, spacing and shape for every DINT internal app.
+ * Plain CSS variables (--dint-*), so apps with or without Tailwind can use them. theme.css maps them to Tailwind.
+ * Foundations follow KRDS (the Korean government design system) for Korean text: Pretendard, 1.6 line height,
+ * keep-all line breaking, and WCAG AA contrast for text on every surface.
+ * Dark mode follows the system setting.
+ */
+:root {
+    /* Surfaces and text */
+    --dint-bg: #f5f6f8;
+    --dint-surface: #ffffff;
+    --dint-surface-2: #f0f2f5;
+    --dint-border: #e1e4ea;
+    --dint-border-strong: #c9ced8;
+    --dint-text: #16181d;
+    --dint-muted: #5d6470;
+
+    /* Brand and accent */
+    --dint-brand: #1f2a44;
+    --dint-on-brand: #ffffff;
+    --dint-accent: #2b59d1;
+    --dint-accent-hover: #234bb3;
+    --dint-on-accent: #ffffff;
+    --dint-accent-soft: #e8eefc;
+
+    /* Status */
+    --dint-ok: #1b7543;
+    --dint-ok-soft: #e3f3e9;
+    --dint-warn: #855600;
+    --dint-warn-soft: #fbf0d9;
+    --dint-danger: #b42318;
+    --dint-danger-soft: #fdecea;
+
+    /* Type */
+    --dint-font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, "Apple SD Gothic Neo",
+        "Malgun Gothic", "Noto Sans KR", sans-serif;
+    --dint-font-mono: ui-monospace, "Cascadia Mono", "D2Coding", Consolas, monospace;
+    --dint-text-xs: 0.75rem;     /* 12 */
+    --dint-text-sm: 0.8125rem;   /* 13 */
+    --dint-text-base: 0.9375rem; /* 15: dense admin screens */
+    --dint-text-lg: 1.0625rem;   /* 17 */
+    --dint-text-xl: 1.25rem;     /* 20 */
+    --dint-text-2xl: 1.5rem;     /* 24 */
+    --dint-leading: 1.6;
+
+    /* Shape and depth */
+    --dint-radius-sm: 6px;
+    --dint-radius: 8px;
+    --dint-radius-lg: 12px;
+    --dint-shadow: 0 1px 2px rgb(16 24 40 / 0.05), 0 1px 3px rgb(16 24 40 / 0.06);
+    --dint-shadow-lg: 0 6px 16px rgb(16 24 40 / 0.10);
+    --dint-focus: 0 0 0 3px rgb(43 89 209 / 0.35);
+
+    /* Layout */
+    --dint-sidebar: 232px;
+    --dint-content: 1120px;
+
+    color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --dint-bg: #0f1115;
+        --dint-surface: #171a20;
+        --dint-surface-2: #1f232b;
+        --dint-border: #2b303a;
+        --dint-border-strong: #3a404c;
+        --dint-text: #e8eaee;
+        --dint-muted: #9aa2ae;
+        --dint-brand: #e8eaee;
+        --dint-on-brand: #0f1115;
+        --dint-accent: #7d9cf0;
+        --dint-accent-hover: #98b1f4;
+        --dint-on-accent: #0f1115;
+        --dint-accent-soft: #1c2640;
+        --dint-ok: #5cc98a;
+        --dint-ok-soft: #14271c;
+        --dint-warn: #e0b35c;
+        --dint-warn-soft: #2a2213;
+        --dint-danger: #f08a80;
+        --dint-danger-soft: #2c1715;
+        --dint-shadow: 0 1px 2px rgb(0 0 0 / 0.4);
+        --dint-shadow-lg: 0 6px 18px rgb(0 0 0 / 0.5);
+        --dint-focus: 0 0 0 3px rgb(125 156 240 / 0.4);
+        color-scheme: dark;
+    }
+}
