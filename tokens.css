@@ -1,39 +1,65 @@
 /*
- * DINT UI tokens: the one place that defines colours, type, spacing and shape for every DINT internal app.
+ * DINT UI tokens: the one place that defines colours, type, spacing and shape for every DINT app and website.
  * Plain CSS variables (--dint-*), so apps with or without Tailwind can use them. theme.css maps them to Tailwind.
- * Foundations follow KRDS (the Korean government design system) for Korean text: Pretendard, 1.6 line height,
- * keep-all line breaking, and WCAG AA contrast for text on every surface.
- * Dark mode follows the system setting.
+ *
+ * Brand: DINT Brand CI Guidelines v1.0 (2026-11) — black & white base, gold as the point colour (≤10% of any screen).
+ *   Ink Black #111111 · Paper White #FFFFFF · DINT Gold #B8912F · Gold 700 #8A6A1F (gold text on white)
+ * Foundations follow KRDS for Korean text: Pretendard, 1.6 line height, keep-all line breaking, and WCAG AA contrast
+ * for text on every surface. Dark mode follows the system setting.
  */
 :root {
+    /* Brand palette (fixed values from the CI guide; prefer the role tokens below in UI code) */
+    --dint-black: #111111;      /* Ink Black: logo, text, dark backgrounds */
+    --dint-charcoal: #2b2b2b;
+    --dint-grey-600: #6b6b6b;
+    --dint-grey-300: #cfcfcf;
+    --dint-grey-100: #f2f2f0;
+    --dint-ivory: #faf8f3;
+    --dint-white: #ffffff;
+    --dint-gold-800: #7a5c17;   /* gold text on gold-100 (AA) */
+    --dint-gold-700: #8a6a1f;   /* gold text on white (AA) */
+    --dint-gold-500: #b8912f;   /* DINT Gold: rules, icons, large numbers, text on black. Not small text on white. */
+    --dint-gold-300: #d9be73;
+    --dint-gold-100: #f3ead2;
+
     /* Surfaces and text */
-    --dint-bg: #f5f6f8;
+    --dint-bg: #f7f7f5;
     --dint-surface: #ffffff;
-    --dint-surface-2: #f0f2f5;
-    --dint-border: #e1e4ea;
-    --dint-border-strong: #c9ced8;
-    --dint-text: #16181d;
-    --dint-muted: #5d6470;
+    --dint-surface-2: #f2f2f0;
+    --dint-border: #e4e4e1;
+    --dint-border-strong: #cfcfcf;
+    --dint-text: #111111;
+    --dint-muted: #6b6b6b;
 
-    /* Brand and accent */
-    --dint-brand: #1f2a44;
+    /* Brand and interaction: primary actions are black (B&W base) */
+    --dint-brand: #111111;
     --dint-on-brand: #ffffff;
-    --dint-accent: #2b59d1;
-    --dint-accent-hover: #234bb3;
+    --dint-accent: #111111;
+    --dint-accent-hover: #2b2b2b;
     --dint-on-accent: #ffffff;
-    --dint-accent-soft: #e8eefc;
+    --dint-accent-soft: #f2f2f0;
 
-    /* Status */
+    /* Gold: the point colour — current nav item, focus ring, highlights, one key number, rules under headings */
+    --dint-gold: #b8912f;           /* lines, dots, icons, fills behind black text */
+    --dint-gold-ink: #8a6a1f;       /* gold text on surface */
+    --dint-gold-soft: #f3ead2;      /* highlight background */
+    --dint-gold-on-soft: #7a5c17;   /* gold text on gold-soft */
+    --dint-on-gold: #111111;        /* text on a gold fill */
+
+    /* Status (kept distinct from gold so warnings never read as brand highlights) */
     --dint-ok: #1b7543;
     --dint-ok-soft: #e3f3e9;
-    --dint-warn: #855600;
-    --dint-warn-soft: #fbf0d9;
+    --dint-warn: #8f4a00;
+    --dint-warn-soft: #fbebda;
     --dint-danger: #b42318;
     --dint-danger-soft: #fdecea;
+    --dint-sale: #e32c2b;           /* e-commerce sale price only; not a CI colour */
 
     /* Type */
-    --dint-font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, "Apple SD Gothic Neo",
-        "Malgun Gothic", "Noto Sans KR", sans-serif;
+    --dint-font: "Pretendard Variable", Pretendard, "Noto Sans KR", "Noto Sans CJK KR", -apple-system, BlinkMacSystemFont,
+        system-ui, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    --dint-font-display: "Trajan Pro 3", "Trajan Pro", Cinzel, "Times New Roman", serif;   /* uppercase, wide tracking */
+    --dint-font-label: GeosansLight, "Century Gothic", Questrial, "Pretendard Variable", sans-serif;  /* EN labels, menus */
     --dint-font-mono: ui-monospace, "Cascadia Mono", "D2Coding", Consolas, monospace;
     --dint-text-xs: 0.75rem;     /* 12 */
     --dint-text-sm: 0.8125rem;   /* 13 */
@@ -41,47 +67,57 @@
     --dint-text-lg: 1.0625rem;   /* 17 */
     --dint-text-xl: 1.25rem;     /* 20 */
     --dint-text-2xl: 1.5rem;     /* 24 */
+    --dint-text-3xl: 2rem;       /* 32: website section titles */
+    --dint-text-4xl: 2.75rem;    /* 44: website hero */
     --dint-leading: 1.6;
+    --dint-tracking-display: 0.25em;  /* Trajan display text */
+    --dint-tracking-label: 0.18em;    /* Geosans labels */
 
-    /* Shape and depth */
-    --dint-radius-sm: 6px;
-    --dint-radius: 8px;
-    --dint-radius-lg: 12px;
-    --dint-shadow: 0 1px 2px rgb(16 24 40 / 0.05), 0 1px 3px rgb(16 24 40 / 0.06);
-    --dint-shadow-lg: 0 6px 16px rgb(16 24 40 / 0.10);
-    --dint-focus: 0 0 0 3px rgb(43 89 209 / 0.35);
+    /* Shape and depth: restrained — small radii, light shadows */
+    --dint-radius-sm: 4px;
+    --dint-radius: 6px;
+    --dint-radius-lg: 10px;
+    --dint-shadow: 0 1px 2px rgb(17 17 17 / 0.05), 0 1px 3px rgb(17 17 17 / 0.05);
+    --dint-shadow-lg: 0 6px 16px rgb(17 17 17 / 0.10);
+    --dint-focus: 0 0 0 3px rgb(184 145 47 / 0.45);
 
     /* Layout */
     --dint-sidebar: 232px;
     --dint-content: 1120px;
+    --dint-site-content: 1280px;
 
     color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --dint-bg: #0f1115;
-        --dint-surface: #171a20;
-        --dint-surface-2: #1f232b;
-        --dint-border: #2b303a;
-        --dint-border-strong: #3a404c;
-        --dint-text: #e8eaee;
-        --dint-muted: #9aa2ae;
-        --dint-brand: #e8eaee;
-        --dint-on-brand: #0f1115;
-        --dint-accent: #7d9cf0;
-        --dint-accent-hover: #98b1f4;
-        --dint-on-accent: #0f1115;
-        --dint-accent-soft: #1c2640;
+        --dint-bg: #0e0e0e;
+        --dint-surface: #171717;
+        --dint-surface-2: #202020;
+        --dint-border: #2c2c2c;
+        --dint-border-strong: #3d3d3d;
+        --dint-text: #ededeb;
+        --dint-muted: #a3a3a0;
+        --dint-brand: #ededeb;
+        --dint-on-brand: #111111;
+        --dint-accent: #ededeb;
+        --dint-accent-hover: #ffffff;
+        --dint-on-accent: #111111;
+        --dint-accent-soft: #262626;
+        --dint-gold: #c9a24a;
+        --dint-gold-ink: #d9be73;
+        --dint-gold-soft: #2a2416;
+        --dint-gold-on-soft: #d9be73;
+        --dint-on-gold: #111111;
         --dint-ok: #5cc98a;
         --dint-ok-soft: #14271c;
-        --dint-warn: #e0b35c;
-        --dint-warn-soft: #2a2213;
+        --dint-warn: #f0a35c;
+        --dint-warn-soft: #2b1e12;
         --dint-danger: #f08a80;
         --dint-danger-soft: #2c1715;
         --dint-shadow: 0 1px 2px rgb(0 0 0 / 0.4);
         --dint-shadow-lg: 0 6px 18px rgb(0 0 0 / 0.5);
-        --dint-focus: 0 0 0 3px rgb(125 156 240 / 0.4);
+        --dint-focus: 0 0 0 3px rgb(201 162 74 / 0.5);
         color-scheme: dark;
     }
 }

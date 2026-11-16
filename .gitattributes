@@ -1,2 +1,6 @@
 *.woff2 binary
 *.css text eol=lf
+*.png binary
+*.svg text eol=lf
+*.json text eol=lf
+*.html text eol=lf

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DINT Org — 예시</title>
+<link rel="icon" href="/brand/favicon/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/fonts.css">
+<link rel="stylesheet" href="/tokens.css">
+<link rel="stylesheet" href="/components.css">
+</head>
+<body class="dint">
+<div class="shell">
+  <nav class="sidebar" aria-label="메뉴">
+    <a class="brand" href="#"><picture><source srcset="/brand/logo/dint-wordmark-white.svg" media="(prefers-color-scheme: dark)"><img src="/brand/logo/dint-wordmark-black.svg" alt="DINT"></picture><span class="app">Org</span></a>
+    <div class="nav-label">관리</div>
+    <a class="nav-item" href="#" aria-current="page">직원</a>
+    <a class="nav-item" href="#">부서</a>
+    <a class="nav-item" href="#">권한</a>
+    <div class="account"><span class="who">관리자</span><a class="btn btn-ghost" href="#">로그아웃</a></div>
+  </nav>
+  <main class="main"><div class="wrap">
+    <div class="page-head">
+      <div><p class="crumbs">관리 / 직원</p><h1>직원</h1><p>DINT Inc.와 DINT GLOBAL PTE. LTD. 직원 목록입니다.</p></div>
+      <div class="actions"><a class="btn" href="#">내보내기</a><a class="btn btn-primary" href="#">직원 추가</a></div>
+    </div>
+    <div class="alert alert-info">GST 등록 신청이 접수되었습니다. <a href="#">자세히 보기</a></div>
+    <div class="stats">
+      <div class="card stat key"><div class="label">11월 해외 매출</div><div class="value">S$128,400</div></div>
+      <div class="card stat"><div class="label">직원</div><div class="value">42</div></div>
+      <div class="card stat"><div class="label">대기</div><div class="value">3</div></div>
+    </div>
+    <form class="filters card"><label class="field wide"><span>검색</span><input placeholder="이름, 이메일"></label><label class="field"><span>법인</span><select><option>전체</option><option>DINT Inc.</option><option>DINT GLOBAL</option></select></label><button class="btn btn-primary">검색</button></form>
+    <div class="card"><div class="table-wrap"><table class="table">
+      <thead><tr><th>이름</th><th>법인</th><th>상태</th><th>입사일</th></tr></thead>
+      <tbody>
+        <tr><td><a href="#">김민지</a></td><td>DINT Inc.</td><td><span class="badge badge-accent dot">리더</span></td><td class="when">2024. 03. 04.</td></tr>
+        <tr><td><a href="#">Tan Wei Ling</a></td><td>DINT GLOBAL</td><td><span class="badge badge-ok">사용</span></td><td class="when">2025. 01. 13.</td></tr>
+        <tr><td><a href="#">이서준</a></td><td>DINT Inc.</td><td><span class="badge badge-warn">대기</span></td><td class="when">2026. 11. 02.</td></tr>
+        <tr><td><a href="#">박지훈</a></td><td>DINT Inc.</td><td><span class="badge badge-danger">퇴사</span></td><td class="when">2022. 07. 18.</td></tr>
+      </tbody></table></div>
+      <div class="table-foot"><span>4명</span></div>
+    </div>
+  </div></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+/*
+ * DINT website layer: brand-facing building blocks for customer websites, landing pages and brand pages
+ * (dint.co.kr, dintkorea.com, campaigns). Uses only the --dint-* tokens (tokens.css). Load after components.css.
+ * Rules (DINT Brand CI v1.0): black & white base, generous white space, gold only to point (≤10% of a screen),
+ * logo always from brand/logo/*.svg (never retyped), Trajan for display caps, Geosans for EN labels, Pretendard for body.
+ *
+ * Markup: see examples/site.html. Put class="dint site" on <body>.
+ */
+@layer components {
+    body.dint.site { background: var(--dint-surface); font-size: 1rem; }
+    .site .container { max-width: var(--dint-site-content); margin: 0 auto; padding-inline: clamp(16px, 4vw, 40px); }
+
+    /* Type */
+    .display, .dint .display {
+        font-family: var(--dint-font-display); font-weight: 400; text-transform: uppercase;
+        letter-spacing: var(--dint-tracking-display); line-height: 1.25; margin: 0;
+        font-size: clamp(1.75rem, 1.2rem + 2.4vw, var(--dint-text-4xl));
+    }
+    .display-sm, .dint .display-sm { font-size: clamp(1.25rem, 1rem + 1.2vw, var(--dint-text-3xl)); }
+    .eyebrow {
+        font-family: var(--dint-font-label); font-size: var(--dint-text-sm); letter-spacing: 0.3em; text-transform: uppercase;
+        color: var(--dint-gold-ink); margin: 0 0 12px;
+    }
+    .label-en { font-family: var(--dint-font-label); letter-spacing: var(--dint-tracking-label); text-transform: uppercase; }
+    .gold-rule { width: 64px; height: 1px; border: 0; background: var(--dint-gold); margin: 20px 0; }
+    .center .gold-rule, .gold-rule.center { margin-inline: auto; }
+    .lead { font-size: 1.0625rem; color: var(--dint-muted); max-width: 60ch; }
+
+    /* Header: logo left (or centred), menu in Geosans caps */
+    .site-header { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--dint-surface) 94%, transparent);
+        backdrop-filter: saturate(1.2) blur(8px); border-bottom: 1px solid var(--dint-border); }
+    .site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 72px; }
+    .site-logo { display: inline-flex; align-items: center; text-decoration: none !important; }
+    /* Logo SVGs include their clear space (cap height on every side), so the letters are 1/3 of the image height. */
+    .site-logo img { height: 42px; width: auto; display: block; margin-left: -14px; }   /* horizontal logo: min. 160px wide */
+    .site-nav { display: flex; gap: clamp(14px, 2.5vw, 32px); flex-wrap: wrap; }
+    .site-nav a { font-family: var(--dint-font-label); font-size: var(--dint-text-sm); letter-spacing: var(--dint-tracking-label);
+        text-transform: uppercase; color: var(--dint-text); text-decoration: none; padding-block: 6px; border-bottom: 1px solid transparent; }
+    .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--dint-text); border-bottom-color: var(--dint-gold); }
+    .announce { background: var(--dint-black); color: #fff; text-align: center; font-size: var(--dint-text-xs);
+        font-family: var(--dint-font-label); letter-spacing: var(--dint-tracking-label); padding: 8px 16px; }
+
+    /* Hero / sections */
+    .hero { position: relative; display: grid; place-items: center; text-align: center; min-height: min(78vh, 720px);
+        padding: 96px 0; background: var(--dint-black) center / cover no-repeat; color: #fff; overflow: hidden; }
+    .hero::before { content: ""; position: absolute; inset: 0; background: rgb(0 0 0 / 0.35); }  /* keeps text readable on photos */
+    .hero > * { position: relative; }
+    .hero .display { color: #fff; }
+    .hero .eyebrow { color: var(--dint-gold-300); }
+    .hero .gold-rule { margin-inline: auto; }
+    .band { padding-block: clamp(56px, 8vw, 112px); }
+    .band-alt { background: var(--dint-surface-2); }
+    .band-dark { background: var(--dint-black); color: #ededeb; }
+    .band-dark .display, .band-dark h2 { color: #fff; }
+    .band-dark .eyebrow { color: var(--dint-gold-300); }
+    .section-title { text-align: center; margin-bottom: clamp(28px, 4vw, 48px); }
+    .section-title .gold-rule { margin-inline: auto; }
+
+    /* Buttons on the website: square, uppercase EN label */
+    .site .btn { border-radius: 0; font-family: var(--dint-font-label); letter-spacing: var(--dint-tracking-label);
+        text-transform: uppercase; font-weight: 400; min-height: 44px; padding: 10px 28px; }
+    .btn-outline-light { background: transparent; border-color: rgb(255 255 255 / 0.8); color: #fff !important; }
+    .btn-outline-light:hover { background: #fff; color: var(--dint-black) !important; }
+
+    /* Product grid and card */
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 32px 20px; }
+    .product { display: flex; flex-direction: column; gap: 6px; color: var(--dint-text); text-decoration: none !important; }
+    .product .thumb { aspect-ratio: 3 / 4; background: var(--dint-surface-2); overflow: hidden; }
+    .product .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+    .product:hover .thumb img { transform: scale(1.03); }
+    .product .code { font-family: var(--dint-font-label); font-size: var(--dint-text-xs); letter-spacing: 0.12em; color: var(--dint-muted); }
+    .product .name { font-size: var(--dint-text-sm); line-height: 1.45; }
+    .price { font-weight: 600; font-size: var(--dint-text-sm); font-variant-numeric: tabular-nums; }
+    .price .was { color: var(--dint-muted); text-decoration: line-through; font-weight: 400; margin-right: 6px; }
+    .price .sale { color: var(--dint-sale); }
+    .tag-new { font-family: var(--dint-font-label); font-size: 10px; letter-spacing: 0.2em; color: var(--dint-gold-ink); }
+
+    /* Footer: entity details from brand/entities.json */
+    .site-footer { background: var(--dint-black); color: #a3a3a0; font-size: var(--dint-text-xs); line-height: 1.8; padding-block: 56px 40px; }
+    .site-footer a { color: #ededeb; text-decoration-color: var(--dint-gold); }
+    .site-footer a:hover { color: var(--dint-gold-300); }
+    .site-footer .footer-logo img { height: 36px; width: auto; margin: 0 0 16px -12px; }
+    .site-footer .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 28px; }
+    .site-footer h4 { font-family: var(--dint-font-label); font-weight: 400; letter-spacing: var(--dint-tracking-label);
+        text-transform: uppercase; color: #fff; font-size: var(--dint-text-xs); margin: 0 0 10px; }
+    .site-footer .legal { border-top: 1px solid #2c2c2c; margin-top: 36px; padding-top: 18px; display: flex;
+        justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+    @media (max-width: 720px) {
+        .site-header .container { min-height: 60px; flex-wrap: wrap; padding-block: 10px; }
+        .site-nav { width: 100%; justify-content: space-between; gap: 10px; }
+        .site-logo img { height: 34px; margin-left: -11px; }
+    }
+}

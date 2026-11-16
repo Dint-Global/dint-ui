@@ -1,6 +1,7 @@
 /*
  * Tailwind v4 theme for DINT apps: maps the --dint-* tokens (tokens.css) to Tailwind names, so utilities like
  * bg-surface, text-muted, border-line, rounded-card, shadow-card and font-sans follow the shared design and dark mode.
+ * Brand extras: text-gold-ink, bg-gold-soft, border-gold, font-display (Trajan), font-label (Geosans), tracking-display.
  *   @import "tailwindcss";
  *   @import "dint-ui/tokens.css";
  *   @import "dint-ui/theme.css";
@@ -18,6 +19,13 @@
     --color-on-brand: var(--dint-on-brand);
     --color-accent: var(--dint-accent);
     --color-accent-soft: var(--dint-accent-soft);
+    --color-on-accent: var(--dint-on-accent);
+    --color-gold: var(--dint-gold);
+    --color-gold-ink: var(--dint-gold-ink);
+    --color-gold-soft: var(--dint-gold-soft);
+    --color-gold-on-soft: var(--dint-gold-on-soft);
+    --color-on-gold: var(--dint-on-gold);
+    --color-sale: var(--dint-sale);
     --color-ok: var(--dint-ok);
     --color-ok-soft: var(--dint-ok-soft);
     --color-warn: var(--dint-warn);
@@ -27,6 +35,10 @@
 
     --font-sans: var(--dint-font);
     --font-mono: var(--dint-font-mono);
+    --font-display: var(--dint-font-display);
+    --font-label: var(--dint-font-label);
+    --tracking-display: var(--dint-tracking-display);
+    --tracking-label: var(--dint-tracking-label);
 
     --radius-sm: var(--dint-radius-sm);
     --radius-md: var(--dint-radius);
