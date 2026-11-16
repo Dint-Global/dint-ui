@@ -80,7 +80,7 @@ Put `class="dint"` on `<body>` (apps) or `class="dint site"` (websites). In the 
 
 ## Patterns
 
-- **Shell:** `.shell` > `nav.sidebar` (`.brand` with the DINT wordmark in a `<picture>`, black / white in dark mode, + `.app` name, `.nav-label`, `a.nav-item[aria-current=page]`, `.account`) + `main.main > .wrap`.
+- **Shell:** `.shell` > `nav.sidebar` (`.brand` with the DINT wordmark in a `<picture>`, black / white in dark mode, + `.brand-app` name, `.nav-label`, `a.nav-item[aria-current=page]`, `.account`) + `main.main > .wrap`.
 - **Page:** `.page-head` (`.crumbs`, `h1`, `p`, `.actions` on the right), then `.card.section` blocks with `.section-head`.
 - **Lists:** `form.filters.card` (GET, so filters are in the URL and links can be shared), then `.card` > `.table-wrap` > `table.table`, `.table-foot` for counts.
 - **Detail:** read-only first: `dl.props` in a section with an "편집" button that opens the edit form (`?edit=…`); actions with outside effects are separate buttons.

@@ -31,7 +31,7 @@
     .sidebar .brand { display: flex; align-items: center; gap: 10px; padding: 4px 10px 16px; color: var(--dint-text); font-weight: 700; font-size: var(--dint-text-lg); text-decoration: none; }
     .sidebar .brand:hover { text-decoration: none; color: var(--dint-text); }
     .sidebar .brand img, .sidebar .brand svg { height: 30px; width: auto; margin: -8px 0 -8px -8px; }  /* DINT wordmark SVG (brand/logo/; the file includes its clear space) */
-    .sidebar .brand .app { font-family: var(--dint-font-label); font-weight: 400; font-size: var(--dint-text-xs); letter-spacing: var(--dint-tracking-label); color: var(--dint-muted); text-transform: uppercase; }
+    .sidebar .brand .brand-app { font-family: var(--dint-font-label); font-weight: 400; font-size: var(--dint-text-xs); letter-spacing: var(--dint-tracking-label); color: var(--dint-muted); text-transform: uppercase; }
     .nav-label { padding: 14px 10px 4px; font-size: var(--dint-text-xs); font-weight: 600; color: var(--dint-muted); letter-spacing: 0.02em; }
     .nav-item { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: var(--dint-radius); color: var(--dint-text) !important; font-weight: 500; text-decoration: none !important; }
     .nav-item:hover { background: var(--dint-surface-2); text-decoration: none !important; }
