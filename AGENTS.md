@@ -1,17 +1,18 @@
 # DINT brand materials: instructions for AI agents
 
-This file is kept, identical, in two places: the root of the GitHub repository `Dint-Global/dint-ui` (`C:\dev\dint-ui`
-on the office PC) and the root of the CI pack on the shared drive (`Z:\2. 전략기획 부서\14. 기타\21.etc\Brand_CI_DINT`).
-If you change one, change the other. People read `BRAND_GUIDE_MAP.md` (Korean and English) beside it; this file is
+This file is kept, identical, in two places: the root of the GitHub repository `Dint-Global/dint-ui` and the root of
+the CI pack on the shared drive (`Z:\2. 전략기획 부서\14. 기타\21.etc\Brand_CI_DINT`, reachable from office PCs).
+If you change one, change the other. The repository may be public, so this file names no links, account details or
+operational notes beyond that drive path; ask the user for those. People read `BRAND_GUIDE_MAP.md` (Korean and English) beside it; this file is
 the same map with the detail an agent needs.
 
 ## The three places, and what each is the source of
 
 | Place | Source of truth for | Audience |
 |---|---|---|
-| **CI pack** `Z:\…\Brand_CI_DINT` | Brand rules and wording (`DINT_Brand_CI_Spec.html` → `.pdf`), original logos (`01_Logo/original`: .ai, PNG), brand fonts (`03_Font`), Office templates (`04_Template`) | Staff, designers, partners |
-| **dint-ui** `C:\dev\dint-ui` (GitHub `Dint-Global/dint-ui`, branch `main`) | Screen values and code: `tokens.css` (`--dint-*`), `theme.css` (Tailwind v4), `components.css`, `site.css`, `fonts.css` + `fonts/pretendard/`, `brand/` (logo SVGs, favicons, `colours.json`, `entities.json`) | Developers, internal apps, websites |
-| **Design system artifact** "DINT UI", https://claude.ai/artifact/GnogqVkNTJmVmYQmHupcjm | Nothing: it is a published view of dint-ui (tokens, components, logos, copies of `colours.json` and `entities.json` under `assets/Data/`) | People designing screens; AI tools |
+| **CI pack** `Z:\…\Brand_CI_DINT` (shared drive) | Brand rules and wording (`DINT_Brand_CI_Spec.html` → `.pdf`), original logos (`01_Logo/original`: .ai, PNG), brand fonts (`03_Font`), Office templates (`04_Template`) | Staff, designers, partners |
+| **dint-ui** (GitHub `Dint-Global/dint-ui`, branch `main`) | Screen values and code: `tokens.css` (`--dint-*`), `theme.css` (Tailwind v4), `components.css`, `site.css`, `fonts.css` + `fonts/pretendard/`, `brand/` (logo SVGs, favicons, `colours.json`, `entities.json`) | Developers, internal apps, websites |
+| **Design system artifact** "DINT UI" on claude.ai (private; the owner shares the link) | Nothing: it is a published view of dint-ui (tokens, components, logos, copies of `colours.json` and `entities.json` under `assets/Data/`) | People designing screens; AI tools |
 
 The owner decided (2026-11-17) to keep these separate and synchronise by hand. Do not merge them or move files between
 them unless asked. Licensed fonts must never reach GitHub, which is the main reason the CI pack stays apart.
@@ -50,7 +51,7 @@ Verify with a byte comparison (`cmp`) after copying.
 2. Edit the HTML. Bump the version on the cover, in the `<title>` and in every page footer (`DINT Brand CI v…`), and
    update the change note on the CI Pack page (07).
 3. Regenerate the PDF with headless Edge, using Windows paths (a `file:///` URL with Korean characters fails):
-   `msedge.exe --headless=new --disable-gpu --no-pdf-header-footer --user-data-dir=<temp dir> --print-to-pdf=<out.pdf> "Z:\…\DINT_Brand_CI_Spec.html"`.
+   `msedge.exe --headless=new --disable-gpu --no-pdf-header-footer --user-data-dir=<temp dir> --print-to-pdf=<out.pdf> "Z:\…\Brand_CI_DINT\DINT_Brand_CI_Spec.html"`.
    The file appears a moment after the command returns. The guide is 9 A4 pages; if the count changes, a page overflowed.
 
 ### Committing in dint-ui
@@ -64,8 +65,7 @@ attribution line the session asks for.
 - Status colours (ok, warn, danger) stay separate from gold. Sale red `#E32C2B` is for sale prices only.
 - Never retype or redraw the logo; use the files. Gold logo on black only.
 - Customer-facing text says DINT; contracts, invoices and tax documents use the exact legal names: 주식회사 딘트 / DINT Inc.,
-  DINT GLOBAL PTE. LTD. The Singapore address 50 Raffles Place, #19-00, Singapore Land Tower, Singapore 048623 is confirmed
-  (2026-11-17); Google Ads billing still shows an old address and must be changed there, by a person.
+  DINT GLOBAL PTE. LTD. Use the addresses in `brand/entities.json` exactly; they are confirmed.
 - Dates: `2026. 11. 17.` (Korean), `17 Nov 2026` (English). Money: `1,234,567원`, `₩1,234,567`, `S$1,234.56`.
 - Korean external documents use the formal 합니다 style; English uses plain, polite British English.
 
@@ -73,8 +73,8 @@ attribution line the session asks for.
 
 | Font | Status |
 |---|---|
-| Trajan Pro 3 (`03_Font/EN`) | Paid Adobe font, internal design only. Never commit, upload, self-host or send outside DINT. |
-| Geosans Light (`03_Font/EN`) | No licence in the file; commercial use needs the designer's (Manfred Klein's) written permission, not yet obtained. Don't use it on the web or in files sent outside. |
+| Trajan Pro 3 | Paid Adobe font, internal design only. Never commit, upload, self-host or send outside DINT. |
+| Geosans Light | Internal design only. Don't use it on the web or in files sent outside; use Questrial. |
 | Noto Sans CJK KR (`03_Font/KR`) | OFL. Body face for documents and print. |
 | Cinzel, Questrial, Pretendard (`03_Font/FREE`) | OFL, safe to share. Cinzel replaces Trajan, Questrial replaces Geosans, Pretendard is the screen body face. |
 
@@ -101,4 +101,5 @@ helpers, logo PNGs). `build_ppt.js` also needs `apply_theme.js` from the Claude 
 - Don't commit fonts other than Pretendard to dint-ui, or `.ai` files, Office templates or the CI PDF.
 - Don't change brand values in only one place.
 - Don't share the design system artifact or change its sharing; the owner does that.
-- Don't stop processes by name (`taskkill /IM`): other DINT apps run on the same PC.
+- Don't stop processes by name (`taskkill /IM`); other apps may run on the same machine. Stop them by PID.
+- Don't add links, account details or operational notes to this repository (the Z: drive path is fine); it may be public.

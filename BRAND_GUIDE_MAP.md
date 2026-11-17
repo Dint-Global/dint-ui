@@ -32,7 +32,7 @@ DINT 브랜드 자료는 세 곳에 있습니다. 쓰는 사람과 목적이 다
 
 ### 지켜야 할 것
 - **Trajan Pro 3** 서체 파일은 회사 밖으로 보내지 않고, GitHub에도 올리지 않습니다 (Adobe 유료 서체, 내부 디자인용).
-- **Geosans Light**는 제작자의 서면 허락을 받기 전까지 웹사이트와 외부 파일에 쓰지 않습니다. 대신 Questrial을 씁니다.
+- **Geosans Light**는 사내 디자인에만 쓰고, 웹사이트와 외부 파일에는 Questrial을 씁니다.
 - 로고는 글자를 다시 입력하지 않고 반드시 로고 파일을 씁니다.
 - 골드는 화면·페이지 면적의 10%를 넘지 않습니다.
 
@@ -77,7 +77,7 @@ DINT brand materials live in three places, each for a different audience.
 
 ### Rules
 - Never send the **Trajan Pro 3** font files outside DINT or commit them to GitHub (paid Adobe font, internal design use only).
-- Don't use **Geosans Light** on websites or in files sent outside until the designer gives written permission; use Questrial.
+- Use **Geosans Light** for in-house design only; websites and files sent outside use Questrial.
 - Never retype the logo; always use a logo file.
 - Gold stays under 10% of any screen or page.
 

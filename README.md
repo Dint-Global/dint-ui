@@ -43,8 +43,7 @@ The full guide (logo, colour, type, entity names) is kept in the strategy team's
 - **Type:** Pretendard for Korean and body text. Display caps use `--dint-font-display` (Trajan Pro 3 → Cinzel →
   Times New Roman) with wide tracking; English labels and menus use `--dint-font-label` (Geosans Light →
   Century Gothic). **Trajan Pro 3 is an Adobe licence and must not be committed or self-hosted** without a web
-  licence; Geosans Light's commercial terms need checking before it is served as a web font. Until then the
-  fallbacks are used.
+  licence, and Geosans Light is not served as a web font. On the web the fallbacks are used.
 - **Entity names:** customer-facing pages say DINT; legal footers and documents use the exact names in
   `brand/entities.json` (DINT Inc., DINT GLOBAL PTE. LTD.).
 
