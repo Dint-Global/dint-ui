@@ -1,5 +1,5 @@
 {
-  "_note": "Official company details for website footers, invoices and document headers. Source: DINT Brand CI Guidelines v1.0 (2026-11) and the live sites. Items marked confirm=true must be checked before use.",
+  "_note": "Official company details for website footers, invoices and document headers. Source: DINT Brand CI Guidelines v1.0 (2026-11) and the live sites. All details confirmed as of 2026-11-17.",
   "brand": {
     "name": "DINT",
     "signature": "DINT IN SEOUL",
@@ -27,8 +27,7 @@
       "legal_name_en": "DINT GLOBAL PTE. LTD.",
       "uen": "202339147D",
       "address_en": "50 Raffles Place, #19-00, Singapore Land Tower, Singapore 048623",
-      "address_confirm": true,
-      "address_note": "Website shows Raffles Place; Google Ads billing shows 68 Circular Rd #02-01, Singapore 049422. Use the ACRA-registered address.",
+      "address_note": "Confirmed 2026-11-17 as the official address. Google Ads billing still shows 68 Circular Rd #02-01, Singapore 049422: update it there.",
       "phone": "+65 9069 3846",
       "email": "global@dintkorea.com",
       "website": "https://dintkorea.com",

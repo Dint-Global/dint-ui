@@ -1,7 +1,7 @@
 {
   "brand": "DINT",
-  "version": "1.0",
-  "updated": "2026-11-16",
+  "version": "1.1",
+  "updated": "2026-11-17",
   "usage_ratio": "Black & White 90% / Gold 10% 이하",
   "colours": [
     {"name": "Ink Black",   "token": "dint-black",    "hex": "#111111", "rgb": [17, 17, 17],    "cmyk": [0, 0, 0, 100], "role": "로고, 본문, 다크 배경"},
@@ -11,6 +11,7 @@
     {"name": "Grey 100",    "token": "dint-grey-100", "hex": "#F2F2F0", "rgb": [242, 242, 240], "cmyk": [0, 0, 1, 5],   "role": "표 머리글, 섹션 배경"},
     {"name": "Ivory",       "token": "dint-ivory",    "hex": "#FAF8F3", "rgb": [250, 248, 243], "cmyk": [0, 1, 3, 2],   "role": "따뜻한 바탕 (선택)"},
     {"name": "Paper White", "token": "dint-white",    "hex": "#FFFFFF", "rgb": [255, 255, 255], "cmyk": [0, 0, 0, 0],   "role": "기본 배경"},
+    {"name": "Gold 800",    "token": "dint-gold-800", "hex": "#7A5C17", "rgb": [122, 92, 23],   "cmyk": [0, 25, 81, 52],  "role": "Gold 100 배경 위 골드 텍스트 (대비 AA)"},
     {"name": "Gold 700",    "token": "dint-gold-700", "hex": "#8A6A1F", "rgb": [138, 106, 31],  "cmyk": [20, 40, 95, 35], "role": "흰 배경 위 골드 텍스트"},
     {"name": "DINT Gold",   "token": "dint-gold-500", "hex": "#B8912F", "rgb": [184, 145, 47],  "cmyk": [15, 35, 90, 10], "role": "메인 포인트 컬러 — 선, 아이콘, 큰 숫자, 검정 배경 위 텍스트"},
     {"name": "Gold 300",    "token": "dint-gold-300", "hex": "#D9BE73", "rgb": [217, 190, 115], "cmyk": [10, 20, 60, 0],  "role": "차트 보조, 다크 배경 위 강조"},
